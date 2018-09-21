@@ -2,6 +2,10 @@
 <head>
 <script type="text/javascript">
 	function processRequest() {
+		
+var url = window.location.href
+var arr = url.split("/");
+var result = arr[2]
 
 		var n1 = document.getElementById("num1").value;
 
@@ -9,7 +13,7 @@
 
 		var op = document.getElementById("op").value;
 
-		var url = "CalculatorWeb/eval?n1=" + n1 + "&n2="
+		var url = "/eval?n1=" + n1 + "&n2="
 				+ n2 + "&op=" + op;
 
 		var xhr = new XMLHttpRequest();
