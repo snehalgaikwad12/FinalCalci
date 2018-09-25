@@ -39,6 +39,6 @@
  </configuration>   
 </plugin>
  </plugins>
-    <finalName>CalculatorWeb</finalName>
+    <finalName>CalculatorWeb_DEV</finalName>
   </build>
 </project>
