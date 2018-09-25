@@ -41,6 +41,5 @@
               </cargo.tomcat.manager.url>
         </properties>
     </configuration>
-</configuration> 
   </build>
 </project>
