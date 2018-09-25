@@ -7,18 +7,6 @@
   <version>1-SNAPSHOT</version>
   <name>CalculatorWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
-	<plugins>
-	<plugin>
-		<groupId>org.apache.tomcat.maven</groupId>
-		<artifactId>tomcat7-maven-plugin</artifactId>
-		<version>2.2</version>
-		<configuration>
-			<url>http://localhost:8080/manager/text</url>
-			<server>TomcatServer</server>
-			<path>/mkyongWebApp</path>
-		</configuration>
-	</plugin>
-	</plugins>
   <dependencies>
      <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
@@ -35,7 +23,6 @@
     <scope>provided</scope>
 </dependency>
   </dependencies>
-  
   <build>
     <finalName>CalculatorWeb</finalName>
   </build>
