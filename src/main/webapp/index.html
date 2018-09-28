@@ -13,7 +13,7 @@ var result = arr[2]
 
 		var op = document.getElementById("op").value;
 
-		var url = "http://"+result+"/DEV_CALCULATOR/eval?n1=" + n1 + "&n2="
+		var url = "http://"+result+"/Calculator_dev/eval?n1=" + n1 + "&n2="
 				+ n2 + "&op=" + op;
 	
 		//alert(url);
@@ -82,7 +82,7 @@ var result = arr[2]
 			</div>
 			<hr>
 			<div align="center">
-				<button onclick="processRequest()" class="btn btn-info">Calculate</button>
+				<button onclick="processRequest()" id="Submit" class="btn btn-info" >Calculate</button>
 			</div>
 
 		</div>
