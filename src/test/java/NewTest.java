@@ -40,7 +40,7 @@ public class NewTest
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "/opt/driver/chromedriver");
 			WebDriver driver=new ChromeDriver();
 		
 	
