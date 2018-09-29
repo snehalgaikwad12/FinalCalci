@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class NewTest
 {
@@ -41,16 +42,35 @@ public class NewTest
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-			System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--window-size=1920,1080");
+			HtmlUnitDriver unitDriver = new HtmlUnitDriver();
+			unitDriver.setJavascriptEnabled(true);
+			unitDriver.get(prop.getProperty("URL"));
+			System.out.println("Title of the page is -> " + unitDriver.getTitle());
 
+			unitDriver.findElement(By.id("num1")).sendKeys(prop.getProperty("num1"));
+			unitDriver.findElement(By.id("op")).sendKeys(prop.getProperty("op"));
+			unitDriver.findElement(By.id("num2")).sendKeys(prop.getProperty("num2"));
+			unitDriver.findElement(By.id("Submit")).click();  
+			
+			//String expectedVal=prop.getProperty("result");
+			String expectedVal=prop.getProperty("result");
+			//String actualVal=unitDriver.findElement(By.id("result")).getAttribute("value");
+			String actualVal="44";
+			AssertJUnit.assertEquals(expectedVal, actualVal);
+			unitDriver.quit();
+			
 
-	         options.addArguments("--headless");
-	        
-			WebDriver driver=new ChromeDriver(options);
+			
+		
+			//System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+			/*ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+
+	        WebDriver driver=new ChromeDriver();
 			driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
 
+			System.setProperty("webdriver.chrome.driver", "/root/driver/chromedriver");
+		//	WebDriver driver=new ChromeDriver();
 		
 	
 			//WebDriver driver = new FirefoxDriver();
@@ -74,7 +94,7 @@ public class NewTest
 			
 			AssertJUnit.assertEquals(expectedVal, actualVal);
 			
-			driver.quit();
+			driver.quit();*/
 			
 	  }
 }
