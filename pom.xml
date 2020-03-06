@@ -30,7 +30,7 @@
  
  <groupId>org.apache.tomcat.maven</groupId>  
  <artifactId>tomcat7-maven-plugin</artifactId>  
- <version>3.3.9</version>  
+ <version>2.2</version>  
  <configuration>  
   <url>http://localhost:9090/manager/text</url>  
   <server>TomcatServer</server>    *(From maven > settings.xml)*
