@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.mahesh</groupId>
+  <groupId>com.snehal</groupId>
   <artifactId>DEV_CALCULATOR</artifactId>
   <packaging>war</packaging>
   <version>1-SNAPSHOT</version>
@@ -28,15 +28,7 @@
         <plugin> 
           <!-- Tomcat plugin -->  
           
- <proxies>
-  <proxy>
-    <id>proxy</id>
-    <active>true</active>
-    <protocol>http</protocol>
-    <host>http://3.21.167.190:8080/job/FirstProject</host>
-    <port>8080</port>
-  </proxy>
-</proxies>
+ 
           
           
  <groupId>org.apache.tomcat.maven</groupId>  
