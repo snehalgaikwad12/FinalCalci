@@ -27,7 +27,18 @@
     <plugins>
         <plugin> 
           <!-- Tomcat plugin -->  
- 
+          
+ <proxies>
+  <proxy>
+    <id>proxy</id>
+    <active>true</active>
+    <protocol>http</protocol>
+    <host>http://3.21.167.190:8080/job/FirstProject</host>
+    <port>8080</port>
+  </proxy>
+</proxies>
+          
+          
  <groupId>org.apache.tomcat.maven</groupId>  
  <artifactId>tomcat7-maven-plugin</artifactId>  
  <version>2.2</version>  
