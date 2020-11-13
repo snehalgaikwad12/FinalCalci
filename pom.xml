@@ -36,7 +36,7 @@
  <version>2.2</version>  
  <configuration>  
   <url>http://localhost:9090/manager/text</url>  
-  <server>TomcatServer</server>    *(From maven > settings.xml)*
+  <server>TomcatServer</server>   
   <username>admin</username>  
   <password>password</password>   
  </configuration>   
